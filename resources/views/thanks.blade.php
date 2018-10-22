@@ -20,31 +20,22 @@
       </div>
       <div class="row">
         <div class="col-lg-4">
-          <div class="feature-thanks">
-            <a href="#" class="clickImg" id="exampleModal">
-              <img src="images/thanks_Kronos.jpg" class="thanks-img box-modal" alt="">
-            </a>
-          </div>
+          <a href="/images/thanks_Kronos.jpg" data-lightbox="roadtrip" data-title="">
+            <img src="/images/thanks_Kronos.jpg" class="thanks-img" alt="">
+          </a>
         </div>
         <div class="col-lg-4">
-          <div class="feature-thanks">
-            <img src="images/thanks_Kronos.jpg" class="thanks-img" alt="">
-          </div>
+          <a href="/images/thanks_DSI.jpg" data-lightbox="roadtrip" data-title="">
+            <img src="/images/thanks_DSI.jpg" class="thanks-img" alt="">
+          </a>
         </div>
         <div class="col-lg-4">
-          <div class="feature-thanks">
-            <img src="images/thanks_Kronos.jpg" class="thanks-img" alt="">
-          </div>
+          <a href="/images/thanks_CMI.jpg" data-lightbox="roadtrip" data-title="">
+            <img src="/images/thanks_CMI.jpg" class="thanks-img" alt="">
+          </a>
         </div>
       </div>
     </div>
   </section>
-
-  {{--<div style="display: none;">--}}
-  {{--<div class="box-modal" id="exampleModal">--}}
-  {{--<div class="box-modal_close arcticmodal-close">закрыть</div>--}}
-  {{--<img src="images/thanks_Kronos.jpg"  class="thanks-img" alt="">--}}
-  {{--</div>--}}
-  {{--</div>--}}
 
 @endsection

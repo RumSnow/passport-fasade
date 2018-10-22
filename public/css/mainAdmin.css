@@ -1,0 +1,16 @@
+button.delete{
+	background: #D71A13;
+	border: none;
+	color: white;
+	padding: 7px;
+	width: 36px;
+	/*margin-left: 15px;*/
+	border-radius: 4px;
+}
+
+.indexTable{
+	display: inline-flex;
+}
+.indexTable a{
+	margin-right: 10px;
+}

@@ -15,6 +15,15 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', 'HomeController@index');
+Route::get('/works/{id}', 'HomeController@works');
 Route::get('/law', 'HomeController@law');
 Route::get('/thanks', 'HomeController@thanks');
 Route::get('/contact', 'HomeController@contact');
+
+
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function(){
+  Route::get('/', 'AdminController@index');
+  Route::resource('/categories', 'CategoriesController');
+  Route::resource('/works', 'WorksController');
+});
+

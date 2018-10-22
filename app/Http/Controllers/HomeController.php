@@ -11,6 +11,12 @@ class HomeController extends Controller{
       return view('index');
     }
 
+    public function works($id){
+      return view('works', [
+        'id' => $id
+      ]);
+    }
+
     public function law(){
       return view('law');
     }
