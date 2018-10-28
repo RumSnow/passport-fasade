@@ -96,7 +96,7 @@
 
         <div class="form-group">
           <button class="btn btn-success" type="submit">Изменить</button>
-          <a href="{{route('works.index')}}" class="btn btn-default">Назад</a>
+          <a href="{{route('works.index')}}" class="btn btn-default">Все объекты</a>
         </div>
         {{Form::close()}}
       </div>

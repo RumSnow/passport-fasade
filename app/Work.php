@@ -29,6 +29,10 @@ class Work extends Model{
     return $this->belongsTo(Stage::class);
   }
 
+  public function city(){
+    return $this->belongsTo(City::class);
+  }
+
   public function sluggable(){
     return [
       'slug' => [
@@ -38,10 +42,10 @@ class Work extends Model{
   }
 
   public static function add($fields){
-    $post = new static;
-    $post->fill($fields);
-    $post->save();
-    return $post;
+    $work = new static;
+    $work->fill($fields);
+    $work->save();
+    return $work;
   }
 
   public function edit($fields){
@@ -87,20 +91,18 @@ class Work extends Model{
     $this->save();
   }
 
-  public function setPublic(){
-    $this->public = 1;
-    $this->save();
-  }
-
   public function togglePublic($value){
-//    dd($value);
     if($value == null){
-//      dd('dasfas');
       $this->public = 0;
       $this->save();
     } else {
       return $this->setPublic();
     }
+  }
+
+  public function setPublic(){
+    $this->public = 1;
+    $this->save();
   }
 
   public function getCategoryTitle(){

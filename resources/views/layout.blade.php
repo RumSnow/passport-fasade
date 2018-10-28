@@ -70,11 +70,9 @@
                 <span class="caret"></span>
               </a>
               <ul class="addMenu dropdown-menu">
-                <li><a href="/works/3">Административные здания</a></li>
-                <li><a href="/works/3">Жилые здания</a></li>
-                <li><a href="/works/3">Торгово-развлекательные центры</a></li>
-                <li><a href="/works/3">Автостоянки</a></li>
-
+              @foreach(\App\Category::all() as $category)
+                <li><a href="{{'/works/'.$category->id}}">{{$category->title}}</a></li>
+                @endforeach
               </ul>
             </li>
             <li class="menu__item">

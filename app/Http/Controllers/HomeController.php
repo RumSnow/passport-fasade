@@ -2,19 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
+use App\Work;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller{
 
-    public function index(){
-//      dd('ok');
-      return view('index');
+  public function index(){
+      return view('index', compact('categories'));
     }
 
     public function works($id){
-      return view('works', [
-        'id' => $id
-      ]);
+      $works = Work::all()->where('category_id', $id);
+      $category = Category::find($id);
+      return view('works', compact('works', 'category', 'categories'));
     }
 
     public function law(){

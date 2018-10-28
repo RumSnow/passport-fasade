@@ -28,7 +28,9 @@
           <td>
             <img src="{{$work->getImage()}}" width="100">
           </td>
-          <td>{{$work->title}}</td>
+          <td>
+            <a href="{{route('works.show', $work->id)}}">{{$work->title}}</a>
+          </td>
           <td>{{$work->getCategoryTitle()}}</td>
           <td>{{$work->getStageTitle()}}</td>
           <td>

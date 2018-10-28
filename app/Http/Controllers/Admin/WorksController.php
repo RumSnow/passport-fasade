@@ -11,8 +11,6 @@ use App\Http\Controllers\Controller;
 class WorksController extends Controller{
 
   public function index(){
-//    $work = Work::first();
-//    dd($work->category->title);
     $works = Work::all();
     return view('admin.works.index', [
       'works' => $works
@@ -38,6 +36,11 @@ class WorksController extends Controller{
     $work->setStage($request->get('stage_id'));
     $work->togglePublic($request->get('public'));
     return redirect()->route('works.index');
+  }
+
+  public function show($id){
+    $work = Work::find($id);
+    return view('admin.works.show', compact('work'));
   }
 
   public function edit($id){

@@ -90,11 +90,11 @@ desired effect
 
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel">
-        <div class="pull-left image">
-          <img src="../assets/img/avatar04.png" class="img-circle" alt="User Image">
+        <div class="image">
+          <img src="/avatars/director.jpg" class="img-circle" alt="User Image">
         </div>
-        <div class="pull-left info">
-          <p>Нащяльник</p>
+        <div class="info">
+          <p>Нащялник</p>
           <!-- Status -->
         </div>
       </div>

@@ -14,3 +14,33 @@ button.delete{
 .indexTable a{
 	margin-right: 10px;
 }
+
+.box__title{
+	margin-top: 0;
+	 text-align: center;
+	 display: block;
+}
+
+.card h3{
+	text-align: center;
+}
+
+.card__img{
+	width: 100%;
+}
+
+.card__desc{
+	font-size: 18px;
+}
+
+.card__desc span{
+	float: right;
+	text-align: right;
+	display: block;
+	font-weight: bold;
+}
+
+.statusUser{
+	border: 3px solid #FF5722;
+	padding: 5px;
+}
