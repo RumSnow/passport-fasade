@@ -8,7 +8,7 @@
         <div class="col-lg-12">
           <div class="thanks whiteBackground">
             <h3 class="thanks__title">
-              Слова благодарности наших заказчиков
+              Слова благодарности от наших партрёров
             </h3>
             <p class="thanks__text ">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem consequatur corporis doloremque

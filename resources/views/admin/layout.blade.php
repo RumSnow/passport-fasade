@@ -91,10 +91,11 @@ desired effect
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel">
         <div class="image">
-          <img src="/avatars/director.jpg" class="img-circle" alt="User Image">
+          <img src="{{$auth->getAvatar()}}" class="img-circle" alt="User Image">
         </div>
         <div class="info">
-          <p>Нащялник</p>
+          <p>Привет, {{$auth->name}}</p>
+{{--          <p>{{Auth::user()->name}}</p>--}}
           <!-- Status -->
         </div>
       </div>
@@ -106,7 +107,8 @@ desired effect
         <li><a href="/admin/works"><i class="fa fa-image"></i> <span>Все объекты</span></a></li>
         <li><a href="/admin/categories"><i class="fa fa-list"></i> <span>Категории</span></a></li>
         <li><a href="/admin/users"><i class="fa fa-group"></i> <span>Пользователи</span></a></li>
-        <li><a href="/logout"><i class="fa fa-sign-out"></i> <span>Выйти</span></a></li>
+        <li><a href="{{route('/')}}"><i class="fa fa-home"></i> <span>Перейти на сайт</span></a></li>
+        <li><a href="{{route('signOut')}}"><i class="fa fa-sign-out"></i> <span>Выйти (SignOut)</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -124,7 +126,9 @@ desired effect
 
         <!-- Default box -->
         <div class="box">
-
+          @if(session('errorFlash'))
+          {{session('errorFlash')}}
+          @endif
 
         @yield('adminContent')
 

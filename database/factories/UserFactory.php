@@ -21,3 +21,17 @@ $factory->define(App\User::class, function (Faker $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Work::class, function (Faker $faker) {
+  return [
+    'title' => $faker->sentence,
+    'city_id' => $faker->numberBetween(1, 2),
+    'category_id' => $faker->numberBetween(1, 4),
+    'stage_id' => $faker->numberBetween(1, 3),
+    'photoName' => 'bugrinskij.jpg',
+    'finishDate' => $faker->date($format = 'Y-m-d', $max = 'now'),
+    'public' => $faker->numberBetween(0, 1),
+    'description' => $faker->sentence
+
+  ];
+});

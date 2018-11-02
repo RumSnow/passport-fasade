@@ -7,14 +7,14 @@ use App\Stage;
 use App\Work;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class WorksController extends Controller{
 
   public function index(){
+//    $auth = Auth::user();
     $works = Work::all();
-    return view('admin.works.index', [
-      'works' => $works
-    ]);
+    return view('admin.works.index', compact('works'));
   }
 
   public function create(){
@@ -45,6 +45,7 @@ class WorksController extends Controller{
 
   public function edit($id){
     $work = Work::find($id);
+//    dd($work->finishDate);
     $categories = Category::pluck('title', 'id')->all();
     $stages = Stage::pluck('title', 'id')->all();
     return view('admin.works.edit', compact('categories', 'stages', 'work'));

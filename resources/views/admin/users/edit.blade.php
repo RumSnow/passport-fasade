@@ -36,9 +36,9 @@
           <div class="form-group">
             <label>Роль</label>
             {{Form::select(
-             'is_admin',
-             ['1' => 'Администратор', '2' => 'Служащий'],
-             $user->is_admin,
+             'role',
+             ['2' => 'Директор', '3' => 'Работник'],
+             $user->role,
              ['class' => 'form-control select2']
              )}}
           </div>

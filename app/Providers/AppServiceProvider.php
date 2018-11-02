@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Category;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -11,9 +13,13 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
-    {
-        //
+    public function boot(){
+      view()->composer('layout', function ($view){
+        $view->with('categories', Category::all());
+      });
+      view()->composer('admin.layout', function ($view){
+        $view->with('auth', Auth::user());
+      });
     }
 
     /**

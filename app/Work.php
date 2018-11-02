@@ -106,7 +106,7 @@ class Work extends Model{
   }
 
   public function getCategoryTitle(){
-    return $this->category != null ? $this->category->title : '- - - -';
+    return $this->category != null ? $this->category->title : '';
   }
 
   public function getStageTitle(){
@@ -118,9 +118,11 @@ class Work extends Model{
   }
 
 
-//  public function setFinishDateAttribute($value){
-//    $date = Carbon::createFromFormat('Y-m-d', $value)->format('d-m-Y');
-//    $this->attributes['finishDate']= $date;
-//  }
+  public function getDate(){
+//    dd($this->finishDate);
+    if($this->finishDate != null){
+      return Carbon::createFromFormat('Y-m-d', $this->finishDate)->format('F d, Y');
+    } return 'none';
+  }
 
 }

@@ -7,9 +7,13 @@
       <div class="box-header">
         <h2 class="box-title">Все пользователи</h2>
       </div>
-      <!-- /.box-header -->
+
+    <!-- /.box-header -->
       <div class="box-body">
+
+        @if($auth->is_admin())
         <a href="{{route('users.create')}}" class="btn btn-success btn-lg">Добавить пользователя</a> <br> <br>
+        @endif()
         <table id="example1" class="table table-bordered table-striped">
           <thead>
           <tr>
@@ -18,41 +22,47 @@
             <th>Email</th>
             <th>Роль</th>
             <th>Аватар</th>
+            @if($auth->is_admin())
             <th>Действия</th>
+            @endif
+
           </tr>
           </thead>
           <tbody>
           @foreach($users as $user)
-          <tr>
-{{--            <td>{{$user->id}}</td>--}}
-            <td>{{$user->name}}</td>
-            <td>{{$user->email}}</td>
-            <td>
-              @if($user->banStatus == 0)
-                {{ $user->is_admin == 1 ? 'Администратор' : 'Служащий'}}
+            @if($user->id !== 1)
+            <tr>
+              {{--            <td>{{$user->id}}</td>--}}
+              <td>{{$user->name}}</td>
+              <td>{{$user->email}}</td>
+              <td>
+                @if($user->banStatus == 0)
+                  {{ $user->role == 2 ? 'Директор' : 'Работник'}}
                 @else
-                <span class="statusUser">Забанен</span>
-              @endif
+                  <span class="statusUser">Забанен</span>
+                @endif
 
-            </td>
-            <td>
-              <img src="{{$user->getAvatar()}}" alt="" width="60px">
-            </td>
-            <td class="indexTable">
-              {{--<a href="#" class="btn btn-info">--}}
-              {{--<i class="fa fa-eye"></i>--}}
-              {{--</a>--}}
-              <a href="{{route('users.edit', $user->id)}}" class="btn btn-warning">
-                <i class="fa fa-pencil"></i>
-              </a>
-              {{Form::open(['route'=> ['users.destroy', $user->id],
-                  'method'=>'delete'])}}
-              <button onclick="return confirm('Вы уверены?');" type="submit" class="delete">
-                <i class="fa fa-remove"></i>
-              </button>
-              {{Form::close()}}
-            </td>
-          </tr>
+              </td>
+              <td>
+                <img src="{{$user->getAvatar()}}" alt="" width="60px">
+              </td>
+              @if($auth->is_admin())
+              <td class="indexTable">
+                  <a href="{{route('users.edit', $user->id)}}" class="btn btn-warning">
+                    <i class="fa fa-pencil"></i>
+                  </a>
+                  {{Form::open(['route'=> ['users.destroy', $user->id],
+                      'method'=>'delete'])}}
+                  <button onclick="return confirm('Вы уверены?');" type="submit" class="delete">
+                    <i class="fa fa-remove"></i>
+                  </button>
+                  {{Form::close()}}
+              </td>
+              @endif
+            </tr>
+            @else
+              @continue
+            @endif
           @endforeach
           </tbody>
 

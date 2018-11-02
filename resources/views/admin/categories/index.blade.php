@@ -9,7 +9,9 @@
       </div>
       <!-- /.box-header -->
       <div class="box-body">
+        @if(Auth::user()->is_admin())
         <a href="{{route('categories.create')}}" class="btn btn-success btn-lg">Добавить категорию</a> <br> <br>
+        @endif()
         <table id="example1" class="table table-bordered table-striped">
           <thead>
           <tr>

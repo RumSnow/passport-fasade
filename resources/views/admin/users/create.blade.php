@@ -32,9 +32,9 @@
           <div class="form-group">
             <label>Уровень доступа</label>
             {{Form::select(
-             'is_admin',
-             ['1' => 'Администратор', '2' => 'Служащий'],
-             2,
+             'Role',
+             ['2' => 'Директор', '3' => 'Работник'],
+             3,
              ['class' => 'form-control select2']
              )}}
           </div>

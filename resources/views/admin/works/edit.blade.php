@@ -62,8 +62,8 @@
         </div>
 
         <div class="form-group">
-{{--          {{date("d F y",strtotime($work->finishDate))}}--}}
-          <label>Дата выполнения работы: </label>
+{{--          {{dd($work->getDate())}}--}}
+          <label>Дата выполнения работы: {{$work->getDate()}}</label>
           <p class="help-block" style="float: right; font-size: 12px; margin-bottom:0">(не обязательно)</p>
           <div class="input-group date">
             <div class="input-group-addon">
@@ -73,7 +73,6 @@
           </div>
           <!-- /.input group -->
         </div>
-
         <div class="form-group">
           <label for="exampleInputFile">Загрузить другую фотографию объекта</label>
           <input type="file" name="photo">

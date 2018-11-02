@@ -19,7 +19,7 @@ class User extends Authenticatable{
    * @var array
    */
   protected $fillable = [
-    'name', 'email', 'is_admin'
+    'name', 'email', 'role'
   ];
 
   /**
@@ -84,8 +84,8 @@ class User extends Authenticatable{
     $this->save();
   }
 
-  public function setAdmin($value){
-    $value ? $this->is_admin=1 : $this->is_admin=0 ;
+  public function setRole($value){
+    $this->role = $value;
     $this->save();
   }
 
@@ -94,6 +94,13 @@ class User extends Authenticatable{
     $this->save();
   }
 
+  public function is_admin(){
+    return ($this->role == 1 or $this->role == 2) ? true : false;
+  }
+
+//  public static function signIn($name, $password){
+//    Auth::attempt([$request->get('name'), $request->get('name')]);
+//  }
 
 
 }

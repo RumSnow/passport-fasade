@@ -12,7 +12,7 @@
     <table id="example1" class="table table-bordered table-striped">
       <thead>
       <tr>
-        {{--<th>#</th>--}}
+        <th></th>
         <th>Изображение</th>
         <th>Название</th>
         <th>Категория</th>
@@ -25,6 +25,7 @@
       <tbody>
       @foreach ($works as $work)
         <tr>
+          <td>{{$work->id}}</td>
           <td>
             <img src="{{$work->getImage()}}" width="100">
           </td>
@@ -38,7 +39,7 @@
               На сайте
             @endif
           </td>
-          {{--          <td>{{$work->finishDate}}</td>--}}
+{{--                    <td>{{$work->finishDate}}</td>--}}
           <td class="indexTable">
             <a href="{{route('works.edit', $work->id)}}" class="btn btn-warning">
               <i class="fa fa-pencil"></i>

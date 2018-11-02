@@ -13,9 +13,10 @@ class HomeController extends Controller{
     }
 
     public function works($id){
-      $works = Work::all()->where('category_id', $id);
-      $category = Category::find($id);
-      return view('works', compact('works', 'category', 'categories'));
+      $works = Work::where('category_id', $id)->paginate(6);
+      $category = Category::find($id)->title;
+//      return view('works', compact('works', 'category', 'categories'));
+      return view('works')->with(['works'=>$works, 'category'=>$category]);
     }
 
     public function law(){
@@ -29,4 +30,5 @@ class HomeController extends Controller{
     public function contact(){
       return view('contact');
     }
+
 }
