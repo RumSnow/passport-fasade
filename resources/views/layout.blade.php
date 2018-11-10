@@ -15,19 +15,18 @@
         integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   {{--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">--}}
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/jquery.arcticmodal-0.3.css">
-  <link rel="stylesheet" href="/css/simple.css">
+
   <link rel="stylesheet" href="/css/lightbox.min.css">
+  {{--<link rel="stylesheet" href="/css/sign.css">--}}
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/sign.css">
 
 </head>
 <body>
 @if(Auth::check())
   <div class="admin-wrapper">
-  <div class="row">
+  <div class="row fullWidth">
 
-    <div class="col-lg-8">
+    <div class="col-lg-7">
       <div class="adminName">
         <p>
           Привет, {{Auth::user()->name}} !
@@ -35,7 +34,7 @@
       </div>
     </div>
 
-    <div class="col-lg-4">
+    <div class="col-lg-5">
       <div class="adminBlock d-flex">
 
         <div class="adminBlock__item">
@@ -43,12 +42,16 @@
         </div>
 
         <div class="adminBlock__item">
-          <a href="{{route('signOut')}}">Выйти</a>
+          <a href="{{route('logout')}}">Выйти</a>
         </div>
 
       </div>
     </div>
   </div>
+  </div>
+  @else
+  <div class="adminBlock__item">
+    <a href="{{route('signForm')}}">Войти в админку</a>
   </div>
 @endif
 
@@ -140,9 +143,11 @@
 
 
   <section class="footer">
-    <div class="footer" style="margin-top: 50px">
-
-    </div>
+    {{--<div class="col-md-12">--}}
+      <p class="footer">
+        All rights reserved - 2018 © ООО "Паспорт Фасада" - Новосибирск - Россия
+      </p>
+    {{--</div>--}}
   </section>
   <!-- ##### All Javascript Files ##### -->
   <script src="/js/jquery.min.js"></script>
@@ -159,7 +164,7 @@
   <!-- Vue js -->
   {{--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>--}}
 
-  <script src="/js/modal.js"></script>
+  <script src="/js/sign.js"></script>
   <script src="/js/main.js"></script>
 </div>
 

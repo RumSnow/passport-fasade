@@ -94,7 +94,7 @@ desired effect
           <img src="{{$auth->getAvatar()}}" class="img-circle" alt="User Image">
         </div>
         <div class="info">
-          <p>Привет, {{$auth->name}}</p>
+          <p>Привет, {{$auth->user }}</p>
 {{--          <p>{{Auth::user()->name}}</p>--}}
           <!-- Status -->
         </div>
@@ -108,7 +108,7 @@ desired effect
         <li><a href="/admin/categories"><i class="fa fa-list"></i> <span>Категории</span></a></li>
         <li><a href="/admin/users"><i class="fa fa-group"></i> <span>Пользователи</span></a></li>
         <li><a href="{{route('/')}}"><i class="fa fa-home"></i> <span>Перейти на сайт</span></a></li>
-        <li><a href="{{route('signOut')}}"><i class="fa fa-sign-out"></i> <span>Выйти (SignOut)</span></a></li>
+        <li><a href="{{route('logout')}}"><i class="fa fa-sign-out"></i> <span>Выйти (Logout)</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -153,7 +153,7 @@ desired effect
       Anything you want
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2018 <a href="#">Паспорт фасадов</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->

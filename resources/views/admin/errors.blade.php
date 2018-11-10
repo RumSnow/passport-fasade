@@ -6,5 +6,6 @@
       @endforeach
     </ul>
     {{session('errorSign')}}
+    {{session('status')}}
   </div>
 </div>

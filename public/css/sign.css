@@ -16,7 +16,7 @@ a:hover,a:focus{
 	/*background: linear-gradient(to bottom, #6f0000, #200122);*/
 	padding: 20px 30px;
 	position: relative;
-	margin: 50px auto;
+	margin: 30px auto;
 	width: 35%;
 }
 .tab:before{
@@ -74,7 +74,7 @@ a:hover,a:focus{
 }
 .form-bg{ background: #ddd; }
 .form-horizontal .form-group{
-	margin: 0 0 15px 0;
+	margin: 0 0 10px 0;
 	position: relative;
 }
 .form-horizontal .form-control{
@@ -98,12 +98,12 @@ a:hover,a:focus{
 	text-transform: capitalize;
 	margin-bottom: 4px;
 }
-.form-horizontal .main-checkbox{
-	width: 20px;
-	height: 20px;
+input.main-checkbox{
+	width: 16px;
+	height: 16px;
 	background: #eec111;
 	float: left;
-	margin: 5px 0 0 20px;
+	margin: 1px 0 0 20px;
 	border: 1px solid #eec111;
 	position: relative;
 }
@@ -152,7 +152,7 @@ a:hover,a:focus{
 	color: #fff;
 	border-radius: 20px;
 	text-transform: uppercase;
-	margin: 20px 0 30px 0;
+	/*margin: 20px 0 30px 0;*/
 }
 
 .form-horizontal .btn:focus{
@@ -161,12 +161,12 @@ a:hover,a:focus{
 	outline: none;
 	box-shadow: none;
 }
-.form-horizontal .forgot-pass{
+.forgot-pass{
 	border-top: 1px solid #615f6c;
 	margin: 0;
 	text-align: center;
 }
-.form-horizontal .forgot-pass .btn{
+.forgot-pass .btn{
 	width: auto;
 	background: transparent;
 	margin: 10px 0 0 0;
@@ -174,7 +174,7 @@ a:hover,a:focus{
 	text-transform: capitalize;
 	transition: all 0.3s ease 0s;
 }
-.form-horizontal .forgot-pass .btn:hover{ color: #eec111; }
+.forgot-pass .btn:hover{ color: #eec111; }
 @media only screen and (max-width: 479px){
 	.tab{ padding: 40px 20px; }
 }
@@ -191,5 +191,9 @@ a:hover,a:focus{
 	color: #fff;
 	border-radius: 20px;
 	text-transform: uppercase;
-	margin-bottom: 30px;
+	margin: 30px auto 15px;
 }
+
+/*.btnSign{*/
+	/*margin: 10px auto;*/
+/*}*/

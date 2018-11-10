@@ -21,7 +21,7 @@
           <p class="case__text">
             {{$work->description}}
           </p>
-          <p>{{$work->category->title}}</p>
+{{--          <p>{{$work->category->title}}</p>--}}
         </div>
       @endforeach
 

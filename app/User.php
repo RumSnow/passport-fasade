@@ -19,7 +19,7 @@ class User extends Authenticatable{
    * @var array
    */
   protected $fillable = [
-    'name', 'email', 'role'
+    'name', 'email', 'password', 'role'
   ];
 
   /**
@@ -38,16 +38,10 @@ class User extends Authenticatable{
     return $user;
   }
 
+
   public function edit($fields){
     $this->fill($fields);
     $this->save();
-  }
-
-  public function generatePassword($password){
-    if ($password != null){
-      $this->password = bcrypt($password);
-      $this->save();
-    }
   }
 
   public function remove(){
@@ -97,10 +91,5 @@ class User extends Authenticatable{
   public function is_admin(){
     return ($this->role == 1 or $this->role == 2) ? true : false;
   }
-
-//  public static function signIn($name, $password){
-//    Auth::attempt([$request->get('name'), $request->get('name')]);
-//  }
-
 
 }
