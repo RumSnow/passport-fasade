@@ -30,6 +30,8 @@
       {{$works->links()}}
     </div>
 
+    @include('footer')
+
 
   </section>
 

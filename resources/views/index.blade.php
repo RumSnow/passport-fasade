@@ -72,8 +72,8 @@
     </div>
   </section>
 
-  <!-- End main content -->
 
+  @include('footer')
 
 
 @endsection

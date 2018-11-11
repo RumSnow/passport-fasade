@@ -29,12 +29,13 @@ class WorksController extends Controller{
       'city_id' => 'required',
       'photo' => 'required|image',
     ]);
-//    dd($request->all());
     $work = Work::add($request->all());
+//    dd($request->all());
     $work->uploadImage($request->file('photo'));
     $work->setCategory($request->get('category_id'));
     $work->setStage($request->get('stage_id'));
     $work->togglePublic($request->get('public'));
+//    dd($work->attributesToArray());
     return redirect()->route('works.index');
   }
 

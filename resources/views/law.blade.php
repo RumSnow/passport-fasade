@@ -335,5 +335,6 @@
     </script>
   </section>
 
+  @include('footer')
 
 @endsection

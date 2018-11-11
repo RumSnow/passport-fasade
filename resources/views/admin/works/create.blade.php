@@ -75,7 +75,7 @@
 
         <div class="form-group">
 
-          {{Form::checkbox('public', '', false)}}
+          {{Form::checkbox('public', '1', false)}}
           <label>
             Разместить на сайте?
           </label>

@@ -23,6 +23,7 @@
   </div>
 </section>
 
+@include('footer')
 
 
 

@@ -50,9 +50,9 @@
   </div>
   </div>
   @else
-  <div class="adminBlock__item">
-    <a href="{{route('signForm')}}">Войти в админку</a>
-  </div>
+  {{--<div class="adminBlock__item">--}}
+    {{--<a href="{{route('signForm')}}">Войти в админку</a>--}}
+  {{--</div>--}}
 @endif
 
 
@@ -122,6 +122,10 @@
               <li class="menu__item">
                 <a href="/contact">Контакты</a>
               </li>
+              {{--<li class="menu__item">--}}
+                <div id="clock">Время</div>
+
+              {{--</li>--}}
 
             </ul>
           </nav>
@@ -142,13 +146,7 @@
   @yield('content')
 
 
-  <section class="footer">
-    {{--<div class="col-md-12">--}}
-      <p class="footer">
-        All rights reserved - 2018 © ООО "Паспорт Фасада" - Новосибирск - Россия
-      </p>
-    {{--</div>--}}
-  </section>
+
   <!-- ##### All Javascript Files ##### -->
   <script src="/js/jquery.min.js"></script>
 
@@ -156,7 +154,7 @@
   <script src="/js/jquery.arcticmodal-0.3.min.js"></script>
 
   <!-- Bootstrap js -->
-  <script src="/js/bootstrap/bootstrap.min.js"></script>
+  {{--<script src="/js/bootstrap/bootstrap.min.js"></script>--}}
 
   <!-- LightBox js -->
   <script src="/js/lightbox.min.js"></script>
@@ -164,9 +162,10 @@
   <!-- Vue js -->
   {{--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>--}}
 
-  <script src="/js/sign.js"></script>
+  {{--<script src="/js/sign.js"></script>--}}
   <script src="/js/main.js"></script>
 </div>
 
+{{--<script type="text/javascript">clock();</script>--}}
 </body>
 </html>
