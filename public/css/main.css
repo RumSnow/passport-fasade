@@ -412,6 +412,23 @@ li.menu__item:hover {
 	font-size: 18px;
 }
 
+.map__hint{
+	font-size: 14px;
+	color: blue;
+}
+
+#map{
+	width: 100%;
+	height: 500px;
+	margin: auto;
+}
+
+.map__object-img{
+	width: 120px;
+}
+
+
+
 
 
 

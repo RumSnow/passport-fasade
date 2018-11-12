@@ -20,6 +20,7 @@ Route::get('/works/{id}', 'HomeController@works');
 Route::get('/law', 'HomeController@law');
 Route::get('/thanks', 'HomeController@thanks')->name('thanks');
 Route::get('/contact', 'HomeController@contact');
+Route::get('/map', 'HomeController@map')->name('map');
 
 // Password Reset Routes
 //Route::get('/password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');

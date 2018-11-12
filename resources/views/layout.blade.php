@@ -70,6 +70,9 @@
           <div class="feature">
             <h1 class="feature__title">Паспорт фасадов</h1>
             <h2 class="feature__about">Разработка. Согласование. Получение документов</h2>
+            {{--<p class="feature__clock">--}}
+            <div id="clock">Время</div>
+            {{--</p>--}}
           </div>
         </div>
         <div class="col-lg-3">
@@ -120,10 +123,12 @@
                 <a href="/thanks">Благодарности</a>
               </li>
               <li class="menu__item">
-                <a href="/contact">Контакты</a>
+                <a href="{{route('map')}}">Карта</a>
+              </li>
+              <li class="menu__item">
+              <a href="/contact">Контакты</a>
               </li>
               {{--<li class="menu__item">--}}
-                <div id="clock">Время</div>
 
               {{--</li>--}}
 
@@ -161,6 +166,8 @@
 
   <!-- Vue js -->
   {{--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>--}}
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU" type="text/javascript"></script>
 
   {{--<script src="/js/sign.js"></script>--}}
   <script src="/js/main.js"></script>

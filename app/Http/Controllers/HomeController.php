@@ -31,5 +31,9 @@ class HomeController extends Controller{
     return view('contact');
   }
 
+  public function map(){
+    return view('map');
+  }
+
 
 }
